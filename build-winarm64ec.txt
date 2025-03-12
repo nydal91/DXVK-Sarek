@@ -1,11 +1,11 @@
 [binaries]
-c = 'arm64ec-w64-mingw32-gcc'
-cpp = 'arm64ec-w64-mingw32-g++'
-ar = 'arm64ec-w64-mingw32-ar'
+c = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-gcc'
+cpp = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-g++'
+ar = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-ar'
 strip = 'strip'
-windres = 'arm64ec-w64-mingw32-windres'
-ld = 'arm64ec-w64-mingw32-ld'
-widl = 'arm64ec-w64-mingw32-widl'
+windres = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-windres'
+ld = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-ld'
+widl = '/home/user/llvm-mingw-20250305-ucrt-ubuntu-20.04-aarch64/bin/arm64ec-w64-mingw32-widl'
 pkgconfig = 'aarch64-linux-gnu-pkg-config'
 
 [host_machine]
