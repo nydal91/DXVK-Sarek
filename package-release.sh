@@ -46,7 +46,7 @@ while [ $# -gt 0 ]; do
 done
 
 function build_arch {
-  export WINEARCH="win$1"
+  export WINEARCH="win$2"
   export WINEPREFIX="$DXVK_BUILD_DIR/wine.$1"
 
   cd "$DXVK_SRC_DIR"
@@ -60,8 +60,8 @@ function build_arch {
         --buildtype "release"                               \
         --prefix "$DXVK_BUILD_DIR"                          \
         $opt_strip                                          \
-        --bindir "x$1"                                      \
-        --libdir "x$1"                                      \
+        --bindir "x$3"                                      \
+        --libdir "x$3"                                      \
         -Dbuild_id=$opt_buildid                             \
         "$DXVK_BUILD_DIR/build.$1"
 
@@ -70,7 +70,7 @@ function build_arch {
 
   if [ $opt_devbuild -eq 0 ]; then
     # Ensure DLLs are present before packaging
-    if ls "$DXVK_BUILD_DIR/x$1/"*.dll 1> /dev/null 2>&1; then
+    if ls "$DXVK_BUILD_DIR/$3/"*.dll 1> /dev/null 2>&1; then
       echo "DLLs found in x$1 directory."
     else
       echo "Warning: No DLLs found in x$1 directory!"
